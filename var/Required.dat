@@ -1,0 +1,752 @@
+gst-plugins-good
+None
+coreutils  gettext  lib32-acl  libarchive  logrotate  rsync  sed  shadow  systemd  tar
+None
+gtk3
+alsa-plugins  alsa-utils  chromium  ffmpeg  gst-plugins-base  lib32-alsa-lib  libcanberra  libsndfile  lxpanel  mpg123  qt4  zita-alsa-pcmi
+lib32-alsa-plugins  pulseaudio-alsa
+None
+None
+apr-util
+serf
+None
+pacman
+octave
+enchant
+gtk3
+at-spi2-atk
+at-spi2-atk  atkmm  gtk2  gtk3
+gtkmm3
+acl  coreutils  lib32-attr  libarchive  libcap  patch  sed  tar
+None
+None
+None
+geoclue2  libcups
+abs  acpid  arch-install-scripts  autoconf  automake  bison  ca-certificates-utils  customizepkg  db  dhcpcd  dialog  diffutils  e2fsprogs  fakeroot  fftw  findutils  flex  freetype2  gawk  gdbm  gettext  gmp  gpm  gzip  hdf5  icu  ijs  iptables  keyutils  lib32-libltdl  lib32-libpcap  libgpg-error  libksba  libpaper  libpcap  libpng  libtool  lsb-release  lvm2  m4  man-db  mkinitcpio  mono  mtools  nss  openresolv  opsu  p7zip  pacman  pcre  shadow  systemd  texinfo  unzip  vte-common  which  xdg-user-dirs  xdg-utils  xdm-archlinux  xorg-mkfontdir  xz
+gcc
+None
+cblas  lapack
+ffmpeg  freetype2  gnupg  graphicsmagick  gst-libav  imlib2  lib32-bzip2  libarchive  libelf  libgsf  links  pcre  python  python2  unzip
+curl  glib-networking  mono  perl-lwp-protocol-https  qt4
+ca-certificates
+ca-certificates
+ca-certificates-cacert  ca-certificates-mozilla  curl  glib-networking  jre7-openjdk-headless  mono  perl-lwp-protocol-https  qt4
+playonlinux
+cairomm  gnuplot  gst-plugins-good  gtk2  gtk3  libgdiplus  pango  python2-cairo
+pangomm
+gnome-themes-standard
+python-numpy  python2-numpy
+None
+gst-plugins-base
+None
+None
+smbclient
+libxcomposite
+arch-install-scripts  ca-certificates-utils  linux  mkinitcpio  netctl  util-linux
+pam
+None
+aurvote  git  netcdf  octave  pacman
+None
+libxdamage
+jack  perl  samba
+at-spi2-core  avahi  chromium  dbus-glib  ghostscript  lib32-dbus  libpcap  libpulse  perl-net-dbus  python-dbus  python2-dbus  qt4  rtkit  systemd  wpa_supplicant  xorg-server
+enchant
+gedit  gtk3
+chromium  fltk  gtk2  gtk3  gv  icedtea-web  qt4  wine
+cryptsetup  lvm2
+None
+None
+cdm-git
+autoconf  customizepkg  yaourt
+libdmx
+ldns
+krb5  lib32-e2fsprogs  libldap  mc
+None
+efibootmgr
+gspell  webkit2gtk  webkitgtk2
+apr-util  avahi  dbus  fontconfig  git  lib32-expat  libarchive  perl-xml-parser  polkit  python  python2  thin-provisioning-tools  wayland
+None
+chromium  gst-libav
+alsa-utils  octave
+subversion
+fakeroot  glibc  mkinitcpio
+ca-certificates-utils  mkinitcpio
+compositeproto  damageproto  libxfixes
+chromium  lib32-flac  libsndfile
+None
+octave
+cairo  ffmpeg  gd  ghostscript  gsfonts  imagemagick  lib32-fontconfig  libass  libbluray  libxft  qt4  qt5-base  ttf-dejavu  wine  xorg-fonts-100dpi  xorg-fonts-75dpi  xorg-fonts-misc  xorg-fonts-type1
+libxfont  libxfont2
+None
+None
+mesa-demos
+None
+ffmpeg  fontconfig  graphicsmagick  harfbuzz  imlib2  lib32-freetype2  libbluray  libxfont  libxfont2  wine  xorg-mkfontscale
+ffmpeg  libass
+fuse2
+fuseiso
+None
+samba
+autoconf  mkinitcpio
+guile
+gcc-fortran
+None
+aspell  blas  db  fftw  flac  gc  gcc  gettext  gmp  gnutls  graphite  groff  hunspell  icu  ilmbase  intel-tbb  js  ladspa  libelf  libfbclient  libmodplug  libproxy  libsigc++  libsoxr  libtiff  libvdpau  libvoikko  libvpx  llvm-libs  ncurses  netcdf  p7zip  pcre  qhull  re2  schroedinger  snappy  thin-provisioning-tools  v4l-utils  vid.stab  webrtc-audio-processing  wine  x265  zita-alsa-pcmi  zita-resampler
+gnuplot
+avahi  man-db  perl  python  python2
+gst-plugins-good  gtk-update-icon-cache  gtk3  libgsf  libnotify  librsvg
+None
+webkit2gtk  webkitgtk2
+lib32-gettext  wine  yaourt
+gv  libspectre  octave
+imlib2  lib32-giflib  libgdiplus  libwebp
+hub
+octave
+mesa-demos
+libsoup
+at-spi2-core  atk  avahi  cairo  dbus-glib  dconf  desktop-file-utils  fribidi  fuseiso  gamin  gdk-pixbuf2  gettext  glib-networking  glibmm  gobject-introspection-runtime  gsettings-desktop-schemas  gstreamer  harfbuzz  json-glib  lib32-glib2  libcroco  libfm-extra  libgdiplus  liblqr  libmm-glib  libplist  libsecret  libsoup  libwacom  mc  pkg-config  polkit  python2-gobject2  shared-mime-info  xmms2
+alsa-lib  attr  bash  binutils  bison  bzip2  cabextract  cdparanoia  coreutils  cracklib  device-mapper  dhcpcd  diffutils  expat  fakeroot  ffmpeg  file  findutils  flex  fuse2  gawk  gcc-libs  gdbm  giflib  gnu-netcat  grep  gsm  gzip  hspell  hyphen  ijs  iniparser  iproute2  iptables  kbd  keyutils  kmod  less  libasyncns  libatomic_ops  libbluray  libbsd  libcap  libcap-ng  libdatrie  libepoxy  libevdev  libexif  libffi  libgpg-error  libice  libidn  libksba  libmnl  libnl  libogg  libomxil-bellagio  libpcap  libpciaccess  libpipeline  libraw1394  libseccomp  libsystemd  libtasn1  libtool  libtxc_dxtn  libunistring  libunwind  libusb  libutempter  libvpx  libwbclient  libx264  libxau  libxdmcp  libxkbcommon  libxshmfence  lsof  lz4  lzo  m4  make  mdadm  metis  mkinitcpio-busybox  mtdev  ncurses  nspr  ocl-icd  openal  opencore-amr  openmp  opus  orc  p11-kit  pacman  pam  patch  pciutils  perl  pixman  popt  readline  run-parts  sdl  sdl2  sed  sip  snappy  speexdsp  sudo  sysfsutils  talloc  tar  tslib  v4l-utils  vid.stab  wavpack  wayland  which  xorg-sessreg  xvidcore  zlib
+atkmm  pangomm
+octave
+fltk  glew  lib32-glu  octave  wine
+coreutils  ffmpeg  glpk  guile  lib32-gmp  mpfr  nettle
+None
+playonlinux
+None
+gpgme  playonlinux
+python-gnuplot
+ffmpeg  glib-networking  gnupg  gnuplot  lib32-gnutls  libcups  samba  smbclient
+libpeas  pygobject-devel
+gnumeric
+pacman
+None
+aalib  links  mc
+octave
+harfbuzz
+mkinitcpio
+man-db
+gedit  glib-networking
+libwmf
+ffmpeg
+gedit
+None
+qt5-webkit
+gst-libav  gst-plugins-base  gst-plugins-good  qtwebkit  webkit2gtk  webkitgtk2  wxgtk
+None
+gst-plugins-base-libs  lib32-gstreamer
+mono-addins  pinta
+adwaita-icon-theme  gtk2  gtk3  lxde-icon-theme
+chromium  gpicview  gtk-sharp-2  libfm-gtk2  libglade  libkeybinder2  libwnck  lxappearance  lxdm  lxinput  lxlauncher  lxmusic  lxrandr  lxsession  lxtask  vte  webkitgtk2  wxgtk
+goffice  gspell  gtkmm3  gtksourceview3  lasem  libpeas  webkit2gtk
+pavucontrol
+gedit
+make
+None
+logrotate  mkinitcpio  texinfo
+freetype2  harfbuzz-icu  lib32-harfbuzz  pango
+chromium  webkit2gtk  webkitgtk2
+None
+netcdf  octave
+adwaita-icon-theme  chromium  fltk  gtk-update-icon-cache  jre7-openjdk  qt4  qt5-tools
+enchant
+None
+None
+enchant
+pciutils  systemd  usbutils
+openmpi
+webkit2gtk
+filesystem
+None
+playonlinux  q4wine
+chromium  harfbuzz-icu  libfbclient  libpsl  qt5-base
+ghostscript
+openexr
+playonlinux
+None
+libcaca  openbox
+xorg-xinit
+samba
+lib32-libxi  libxi  libxtst
+suitesparse
+None
+netctl
+iproute2  systemd
+None
+gspell
+ffmpeg  gst-plugins-good
+gdk-pixbuf2
+jre7-openjdk-headless
+ghostscript
+None
+icedtea-web  opsu
+jre7-openjdk
+polkit
+geoclue2  gtk3
+cdm-git  systemd
+libx11
+cifs-utils  krb5  lib32-keyutils
+linux  mkinitcpio  pciutils  systemd
+cifs-utils  curl  lib32-krb5  libcups  libsoup  libtirpc  openssh  postgresql-libs  s-nail
+None
+ffmpeg
+arpack  python-numpy  python2-numpy  suitesparse
+goffice
+ghostscript  graphicsmagick  imagemagick  jre7-openjdk-headless  lib32-lcms2  libmng  openjpeg2  wine
+samba  smbclient
+openssh
+gzip  man-db
+lib32-gettext
+lib32-alsa-plugins  lib32-libsndfile  lib32-mpg123
+None
+lib32-acl  lib32-libcap
+lib32-freetype2  lib32-libelf
+lib32-glib2  lib32-libpulse
+lib32-krb5
+lib32-fontconfig  lib32-wayland
+lib32-libsndfile
+wine
+lib32-fontconfig  lib32-harfbuzz  wine
+lib32-flac  lib32-gettext  lib32-gmp  lib32-libtiff  lib32-llvm-libs  lib32-opencl-nvidia  lib32-pcre  lib32-systemd  lib32-v4l-utils  wine
+wine
+None
+lib32-gstreamer  lib32-harfbuzz  lib32-libpulse
+lib32-alsa-lib  lib32-attr  lib32-bzip2  lib32-expat  lib32-gcc-libs  lib32-giflib  lib32-keyutils  lib32-libasyncns  lib32-libffi  lib32-libgpg-error  lib32-libice  lib32-libidn  lib32-libjpeg-turbo  lib32-libltdl  lib32-libnl  lib32-libogg  lib32-libpcap  lib32-libpciaccess  lib32-libpng12  lib32-libtasn1  lib32-libtxc_dxtn  lib32-libusb  lib32-libxau  lib32-libxdmcp  lib32-libxshmfence  lib32-mpg123  lib32-ncurses  lib32-ncurses5-compat-libs  lib32-ocl-icd  lib32-openal  lib32-openssl  lib32-orc  lib32-p11-kit  lib32-readline  lib32-speexdsp  lib32-util-linux  lib32-wayland  lib32-xz  lib32-zlib
+wine
+lib32-nettle
+lib32-libcups
+None
+lib32-gst-plugins-base-libs
+lib32-freetype2
+lib32-krb5
+lib32-libcups
+wine
+lib32-libpulse
+lib32-libpulse  lib32-systemd
+None
+lib32-mesa
+lib32-glib2  lib32-mesa
+lib32-glib2  lib32-llvm-libs  lib32-p11-kit  lib32-wayland
+lib32-libxslt  lib32-mesa  lib32-systemd
+lib32-libgcrypt
+lib32-libsm
+lib32-gnutls
+lib32-libtiff  lib32-v4l-utils
+lib32-krb5
+lib32-mpg123
+lib32-libpcap
+lib32-flac  lib32-libvorbis  lib32-speex
+wine
+lib32-libdrm
+lib32-freetype2  lib32-libcups
+None
+None
+None
+lib32-libpulse  wine
+lib32-libpulse  lib32-libsamplerate
+lib32-gnutls  lib32-p11-kit
+lib32-lcms2  lib32-libcups
+lib32-mesa
+lib32-libpcap
+lib32-libsndfile
+lib32-libxext  lib32-libxfixes  lib32-libxrender  lib32-sdl
+lib32-libxcb
+lib32-libx11
+None
+wine
+lib32-mesa  wine
+lib32-libxcb
+lib32-libxi  lib32-libxinerama  lib32-libxrandr  lib32-libxtst  lib32-libxv  lib32-libxxf86vm  lib32-sdl
+lib32-libxcomposite  lib32-libxcursor  lib32-libxdamage  lib32-libxi  lib32-libxtst
+lib32-libxtst  wine
+None
+lib32-gstreamer  lib32-libxslt  lib32-wayland  wine
+wine
+lib32-libxcursor  lib32-libxrandr  lib32-sdl
+lib32-mesa
+None
+lib32-libpulse
+lib32-gst-plugins-base-libs
+lib32-mesa
+lib32-mesa
+lib32-mesa-libgl
+lib32-glu
+None
+lib32-libxml2  lib32-llvm-libs  lib32-ncurses5-compat-libs  lib32-readline
+None
+lib32-gnutls
+None
+None
+None
+lib32-libldap
+lib32-gst-plugins-base-libs
+lib32-gnutls
+lib32-glib2
+lib32-libxml2
+None
+None
+lib32-speex
+lib32-dbus  lib32-libpulse  lib32-libusb
+lib32-e2fsprogs  lib32-glib2  lib32-libsm
+None
+lib32-mesa
+lib32-libtiff  lib32-libxslt  lib32-systemd
+lib32-freetype2  lib32-gnutls  lib32-libelf  lib32-libpng  lib32-libpng12  lib32-libtiff  lib32-libxml2  lib32-llvm-libs  lib32-opencl-nvidia
+libmariadbclient  samba  thin-provisioning-tools
+mkinitcpio  pacman
+ffmpeg
+gnupg  pinentry
+lib32-libasyncns  libpulse
+gc
+ffmpeg  gst-plugins-good
+ffmpeg
+libwbclient  samba  smbclient
+gst-plugins-good
+libcanberra-pulse
+pavucontrol
+avahi  coreutils  gstreamer  inetutils  iputils  lib32-libcap  libpulse  libsystemd  pinentry  samba  systemd
+cifs-utils
+librsvg
+ghostscript  gtk2  jre7-openjdk-headless  lib32-libcups  qt5-base  samba  smbclient
+avahi
+libthai
+xorg-xdpyinfo
+lib32-libdrm  libva  mesa
+gst-plugins-good
+llvm-libs  openssh
+lib32-libelf  mesa  systemd
+gtk3  xorg-server
+libinput
+links
+chromium  libfm  libgdiplus
+None
+glib2  guile  llvm-libs  p11-kit  python  python2  wayland
+libfm-gtk2
+libfm  menu-cache
+lxpanel  pcmanfm
+libxfont  libxfont2  xorg-luit  xorg-mkfontscale
+chromium  cryptsetup  gnupg  lib32-libgcrypt  libsecret  libsystemd  libxslt  mesa  smbclient  systemd
+mono
+gtk-sharp-2  pygtk
+nvidia-utils
+gnupg  gpgme  lib32-libgpg-error  libassuan  libgcrypt  libksba
+goffice
+gst-plugins-good  libwacom
+lib32-libice  libsm
+imlib2
+gnutls  iputils  lib32-libidn  systemd  wget
+ffmpeg  gst-plugins-good
+usbmuxd
+qt5-base  xf86-input-libinput
+chromium  fltk  gdk-pixbuf2  ghostscript  gnuplot  imlib2  jasper  jre7-openjdk-headless  lib32-libjpeg-turbo  libtiff  libwebp  libwmf  qt5-base  v4l-utils
+lxpanel
+gnupg
+krb5  lib32-libldap  smbclient  sudo
+imagemagick
+None
+geoclue2
+qt4
+libnftnl
+ffmpeg
+gcc
+iptables
+lib32-libnl  libpcap  wpa_supplicant
+lxmusic  webkit2gtk  zenity
+celt  flac  lib32-libogg  libtheora  libvorbis  speex
+mesa
+ghostscript
+lib32-libpcap  wine
+lib32-libpciaccess  libdrm
+gedit
+man-db
+libusbmuxd
+cairo  chromium  freetype2  gdk-pixbuf2  ghostscript  gl2ps  icoutils  imlib2  jbig2dec  lib32-libpng  libcups  libwebp  openjpeg2
+glib-networking  qt5-base
+curl  wget
+chromium  ffmpeg  gst-plugins-good  lib32-libpulse  libcanberra-pulse  pulseaudio
+ffmpeg  libavc1394  libiec61883
+adwaita-icon-theme  gnome-themes-standard  goffice  gtk2  gtk3  openbox
+alsa-utils  jack  lib32-libsamplerate
+libldap
+systemd
+pinentry  webkit2gtk  webkitgtk2
+gst-plugins-good
+atkmm  cairomm  glibmm  pavucontrol
+graphicsmagick  lib32-libsm  libpulse  libxt  openbox  qt5-base  wine  wxgtk
+lib32-libsndfile  libpulse  libsamplerate  octave  zita-resampler
+geoclue2  gst-plugins-good  webkitgtk2
+ffmpeg  pulseaudio
+goffice
+ffmpeg
+curl  mc
+dbus  dhcpcd  libgudev  procps-ng  systemd  util-linux
+gnutls  lib32-libtasn1  p11-kit
+pango
+ffmpeg  gst-plugins-base  libshout
+gdk-pixbuf2  ghostscript  imlib2  lcms2  lib32-libtiff  libcups  libgdiplus  libwebp  openjpeg2
+pam
+graphicsmagick  guile  hwloc  imagemagick  lib32-libltdl  libcanberra  mpg123  openmpi  pulseaudio  unixodbc
+mesa
+gettext  gnutls  guile
+gstreamer  strace  xorg-server
+lib32-libusb  libcups  libpcap  libusbmuxd  usbutils
+libimobiledevice
+xterm
+cryptsetup  e2fsprogs  util-linux  wget  xfsprogs
+ffmpeg
+ffmpeg
+gst-plugins-base
+enchant
+ffmpeg  gst-plugins-base  lib32-libvorbis  libcanberra  libshout  libsndfile
+chromium  ffmpeg  gst-plugins-good
+libinput
+cifs-utils  smbclient
+chromium  ffmpeg  gd  qt5-webkit  webkit2gtk  webkitgtk2
+None
+lxpanel
+aalib  at-spi2-atk  ffmpeg  gdk-pixbuf2  lib32-libx11  libwmf  libxext  libxfixes  libxkbfile  libxrender  libxt  sdl  sdl2  startup-notification  xorg-xclock  xorg-xdpyinfo  xorg-xinit  xorg-xkill  xorg-xmodmap  xorg-xprop  xorg-xrandr  xorg-xrdb  xorg-xsetroot
+ffmpeg
+lib32-libxau  libxcb
+xorg-xclock  xorg-xdm  xorg-xmessage  xterm
+ffmpeg  lib32-libxcb  libx11  libxkbcommon-x11  xcb-util  xcb-util-image  xcb-util-keysyms  xcb-util-renderutil  xcb-util-wm  xorg-xwininfo
+gtk2  gtk3  lib32-libxcomposite  qt5-webkit  xorg-xdpyinfo
+fltk  gtk2  gtk3  lib32-libxcursor  openbox  sdl2  wine  xorg-xsetroot
+gst-plugins-good  gtk2  gtk3  lib32-libxdamage  mesa  wine
+lib32-libxdmcp  libxcb
+cairo  graphicsmagick  imagemagick  imlib2  lib32-libxext  libdmx  libglvnd  libvdpau  libxi  libxinerama  libxmu  libxpm  libxrandr  libxres  libxss  libxtst  libxv  libxxf86dga  libxxf86vm  sdl  sdl2  xorg-xdpyinfo
+lib32-libxfixes  libva  libxcomposite  libxcursor  libxdamage  libxtst
+xorg-bdftopcf
+xorg-server
+fltk  pango  tk  xorg-xclock  xorg-xdm  xterm
+freeglut  glew  gtk2  gtk3  lib32-libxi  libxtst  qt4  qt5-base  wine
+fltk  gtk2  gtk3  lib32-libxinerama  openbox  xorg-xdm  xorg-xdpyinfo
+gtk3  libxkbcommon-x11
+qt5-base
+xorg-setxkbmap  xorg-xclock  xorg-xkbcomp  xterm
+gspell  gstreamer  gtksourceview3  lib32-libxml2  libbluray  libcroco  libglade  libgsf  libplist  libsoup  libxslt  openbox  shared-mime-info  wayland  wine
+glew  libxaw  playonlinux  xaw3d  xorg-xauth  xorg-xclock  xorg-xkill  xorg-xrdb  xorg-xset  xorg-xsetroot
+gd  libxaw
+freeglut  gtk2  gtk3  lib32-libxrandr  openbox  qt4  wine  xorg-xrandr
+cairo  lib32-libxrender  libxcursor  libxft  libxrandr  qt5-base  sdl  sdl2  xorg-xclock  xorg-xdpyinfo
+libwnck
+lib32-libxshmfence  mesa
+chromium  goffice  lib32-libxslt  qt5-webkit  webkit2gtk  webkitgtk2
+chromium  tk
+ghostscript  imagemagick  libxmu  libxpm  webkit2gtk  webkitgtk2
+at-spi2-core  lib32-libxtst  libpulse  xorg-xdpyinfo
+gst-plugins-base-libs  lib32-libxv  libxvmc  qt4
+xf86-video-intel
+xorg-xdpyinfo
+lib32-libxxf86vm  mesa  xorg-xdpyinfo
+None
+None
+nvidia
+glibc
+linux
+mesa
+None
+None
+None
+gnuplot  vicious
+None
+lxappearance-obconf
+None
+None
+None
+None
+None
+None
+lxlauncher  lxpanel  pcmanfm
+None
+None
+None
+None
+None
+None
+libarchive  libmariadbclient  libsystemd  systemd
+cairo  libarchive  libmariadbclient
+autoconf  bison  flex
+None
+None
+None
+None
+None
+libfm  lxlauncher  lxpanel
+gtk3  lib32-mesa  mesa-libgl  xf86-video-intel
+playonlinux
+cairo  freeglut  gl2ps  glu  libva  mesa-demos  nvidia  qt4  qt5-base  sdl2  webkitgtk2  xorg-server
+suitesparse
+chromium
+linux
+mkinitcpio
+gtk-sharp-2  mono-addins
+pinta
+gawk  libmpc
+lib32-mpg123
+libinput
+None
+alsa-utils  aspell  bash  dialog  guile  htop  lame  less  lib32-ncurses  libcaca  libedit  libxml2  llvm-libs  pinentry  procps-ng  psmisc  readline  texinfo  vi  xterm
+ffmpeg
+None
+gnutls  lib32-nettle
+gnupg
+js  nss
+chromium  jre7-openjdk-headless
+hwloc
+None
+nvidia
+imagemagick
+None
+lib32-openal
+lxappearance-obconf
+None
+None
+ffmpeg
+None
+ffmpeg
+None
+arpack
+netctl
+None
+coreutils  curl  freetds  git  iputils  ldns  lib32-openssl  libarchive  libevent  libmariadbclient  libsasl  libshout  libssh  libssh2  openssh  perl-net-ssleay  postgresql-libs  python  python2  s-nail  wget  wpa_supplicant
+None
+ffmpeg  gst-plugins-base
+gst-plugins-base-libs  lib32-orc  pulseaudio  schroedinger
+ca-certificates-utils  gnutls  lib32-p11-kit  nss
+playonlinux
+yaourt
+arch-install-scripts  package-query  pkgbrowser  yaourt
+pacman
+cifs-utils  inetutils  kbd  polkit  shadow  sudo  systemd  util-linux  xorg-xdm
+pam
+gst-plugins-base  gtk2  gtk3  librsvg  openbox  pangomm
+gtkmm3
+None
+None
+alsa-utils  chromium  efibootmgr
+None
+None
+git  glib2  grep  less  lib32-pcre  libmariadbclient  slang
+automake  chromium  git  groff  hspell  hyphen  imagemagick  numactl  openssl  perl-crypt-passwdmd5  perl-digest-sha1  perl-encode-locale  perl-error  perl-file-listing  perl-html-parser  perl-html-tagset  perl-http-cookies  perl-http-daemon  perl-http-date  perl-http-message  perl-http-negotiate  perl-io-html  perl-io-socket-ssl  perl-ipc-system-simple  perl-libwww  perl-lwp-mediatypes  perl-net-dbus  perl-net-http  perl-net-ssleay  perl-parse-yapp  perl-text-iconv  perl-uri  perl-www-robotrules  perl-x11-protocol  perl-xml-parser  perl-xml-twig  rlwrap  rsync  strace  texinfo  xmms2
+None
+None
+perl-http-message  perl-libwww
+git
+chromium  perl-file-desktopentry  perl-file-mimeinfo
+perl-file-mimeinfo
+perl-libwww
+None
+perl-libwww
+perl-html-parser
+perl-libwww
+perl-libwww
+perl-file-listing  perl-http-cookies  perl-http-daemon  perl-http-message  perl-libwww
+perl-http-cookies  perl-http-daemon  perl-http-negotiate  perl-libwww
+perl-libwww
+perl-http-message
+perl-lwp-protocol-https
+perl-file-basedir
+icoutils  perl-lwp-protocol-https
+perl-http-daemon  perl-http-message  perl-libwww
+None
+None
+perl-libwww  perl-lwp-protocol-https
+perl-io-socket-ssl
+samba
+perl-xml-twig
+perl-file-desktopentry  perl-http-message  perl-io-socket-ssl  perl-libwww  perl-www-robotrules
+perl-libwww
+None
+perl-xml-twig
+perl-net-dbus
+gnupg
+None
+cairo  xf86-video-intel  xorg-server
+None
+None
+None
+lxsession  rtkit
+None
+cryptsetup  efivar  ldb  libdv  logrotate  rsync  samba  smbclient
+None
+None
+alsa-utils
+pulseaudio-alsa
+None
+python-gobject
+python2-gobject2
+None
+python-pyqt5
+dex  mono  pkgbrowser  python-dbus  python-gnuplot  python-gobject  python-numpy  python-pyqt5  python-sip
+None
+python-dbus  python2-dbus
+None
+gedit
+python-gnuplot
+pkgbrowser
+python-pyqt5
+python2-appdirs  python2-cairo  python2-dbus  python2-gobject2  python2-nose  python2-numpy  python2-pip  python2-pyparsing  python2-six  python2-xdg  samba  smbclient  wxpython
+python2-setuptools
+pygtk
+None
+pygtk
+None
+None
+python2-setuptools
+None
+python2-packaging
+python2-nose  python2-pip
+python2-packaging
+None
+None
+octave
+octave
+appset-qt  qtwebkit
+pyqt5-common  q4wine  qscintilla-qt5  qt5-sensors  qt5-svg  qt5-tools  qt5-xmlpatterns  wpa_supplicant_gui
+qt5-location  qt5-webchannel
+qt5-webkit
+qt5-webkit
+gnuplot
+q4wine
+qt5-webkit
+None
+qt5-declarative
+appset-qt
+libxrandr
+chromium
+bash  gnupg  gnuplot  gnutls  hunspell  js  lib32-readline  libxml2  lua  lvm2  pcre  postgresql-libs  smbclient  sqlite  unixodbc  wpa_supplicant  xmms2
+libxtst
+None
+libxrender
+None
+abs
+pulseaudio
+libpaper
+None
+None
+ffmpeg
+libxss
+lib32-sdl
+ffmpeg
+fakeroot
+subversion
+util-linux
+gdk-pixbuf2  gtk2  gtk3  perl-file-mimeinfo
+python-sip
+mc
+samba
+chromium
+libcanberra
+ffmpeg  lib32-speex  libshout
+lib32-speexdsp  pulseaudio  speex
+gnupg  libsoup  nss  python2  q4wine  qt4  qt5-base  subversion  webkitgtk2
+libwnck  lxlauncher  openbox
+None
+None
+None
+octave
+iputils  v4l-utils
+None
+chromium  device-mapper  dhcpcd  lib32-systemd  libinput  libpulse  libusb  libwacom  lvm2  mkinitcpio  netctl  pcmciautils  polkit  qtwebkit  rtkit  subversion  systemd-sysvcompat  xdg-user-dirs  xorg-xdm
+None
+gst-plugins-good
+cifs-utils  ldb  samba  smbclient  tevent
+lib32-libltdl  libtool
+tk
+ldb  libcanberra  pulseaudio  samba  smbclient
+ldb  smbclient
+gnu-netcat  guile
+lvm2
+None
+qt5-base
+chromium  gnome-themes-standard
+glibc
+freetds
+playonlinux
+libimobiledevice
+None
+apr  arch-install-scripts  fakeroot  jfsutils  lib32-util-linux  libsm  mkinitcpio  reiserfsprogs  systemd
+ffmpeg  gst-plugins-good  lib32-v4l-utils
+None
+None
+ffmpeg
+libxv
+lxterminal
+vte
+gst-plugins-good
+gtk3  lib32-wayland  mesa
+gtk3
+zenity
+None
+pulseaudio
+customizepkg  playonlinux
+q4wine
+playonlinux  q4wine  wine-mono  wine_gecko
+None
+None
+None
+wpa_supplicant_gui
+None
+gnuplot  wxpython
+playonlinux
+ffmpeg
+gv
+xterm
+libxcb
+startup-notification  xcb-util-image  xf86-video-intel
+qt5-base
+qt5-base
+qt5-base
+qt5-base
+playonlinux
+chromium  fltk  jre7-openjdk  qt4
+None
+fixesproto  libxext
+xorg-server
+None
+libxxf86dga
+libxxf86vm
+None
+libxinerama
+libxkbcommon  xorg-server-common
+lxmusic
+xorg-font-utils
+xorg-font-utils
+gsfonts  xorg-fonts-100dpi  xorg-fonts-75dpi  xorg-fonts-misc  xorg-fonts-type1
+None
+None
+xorg-fonts-100dpi  xorg-fonts-75dpi  xorg-fonts-misc  xorg-fonts-type1
+ttf-dejavu  xorg-fonts-100dpi  xorg-fonts-75dpi  xorg-fonts-misc  xorg-fonts-type1
+xorg-server-common
+None
+xterm
+ttf-dejavu  xorg-font-utils
+ttf-dejavu  xorg-font-utils  xorg-mkfontdir
+lxdm  nvidia-utils
+xorg-server
+xorg-xdm
+xorg-server-common
+xorg-xinit
+xdm-archlinux
+xdm-archlinux
+cdm-git
+cdm-git
+xorg-server-common
+xdm-archlinux
+xdm-archlinux
+xorg-xinit
+None
+lxrandr  opsu
+xorg-xdm  xorg-xinit
+xdg-utils
+xdm-archlinux
+xdm-archlinux
+damageproto  fixesproto  libice  libx11  libxau  libxdmcp  libxfont  libxfont2
+playonlinux
+ffmpeg
+ffmpeg  graphicsmagick  kmod  lib32-xz  libarchive  libelf  libmariadbclient  libsystemd  libtiff  libunwind  libxml2  links  systemd
+package-query
+None
+None
+jack
+jack
+binutils  cracklib  curl  efibootmgr  ffmpeg  file  freetype2  fuseiso  ghostscript  gnutls  hdf5  hspell  js  kmod  lib32-zlib  libarchive  libelf  libfontenc  libid3tag  libmariadbclient  libpng  libssh  libtiff  libxml2  llvm-libs  man-db  minizip  mono  nss  opencl-nvidia  openexr  openjpeg2  pcre  python  python2  rsync  taglib  tcl
