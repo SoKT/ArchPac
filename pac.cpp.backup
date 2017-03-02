@@ -1,0 +1,32 @@
+#include <iostream>
+
+###########################
+const int DepWidth=$PWD/var/DepWidth.dat;
+const int PacCount=752;
+const int MaxWidth=29;
+###########################
+using namespace std;
+
+struct Packages
+{
+	char name[MaxWidth];
+	int level=1;
+	char dep[DepWidth];
+};
+
+
+
+void main()
+{
+	struct Packages Pac[PacCount];
+	for ( i = 0; i < PacCount; i++ ) 
+	{
+		
+	}
+	  
+
+	cout << "123"  << "\n";
+	return 0;
+}
+
+
