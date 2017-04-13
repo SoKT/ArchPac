@@ -26,7 +26,7 @@ set output "$PWD/png/img $(date).png"
 # 0 0 2 3 3 3 3 2 0 0
 # 0 0 0 1 2 2 1 0 0 0
 
-plot '/home/ofit/.code/packages/01_02_2017/var/Bitmaple.dat' matrix with image
+plot '$PWD/var/Bitmaple.dat' matrix with image
 
 EOP
 
