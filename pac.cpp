@@ -19,6 +19,7 @@ struct Packages
 	char dep[DepWidth];
 	int xpos;
 	int ypos;
+	int priority;
 };
 
 int main()
@@ -27,24 +28,28 @@ int main()
 	int i=0;
 //	char ichar[MaxWidth];
 	string istring,itchar;
+	
 //-------------------------------------------------------------------------	
-// Read file
-    ifstream File("/home/ofit/.code/packages/01_02_2017/var/Packages.dat");
+// Read files
+
+    ifstream File("/home/lubuntu/code/04_13_2017/var/Packages.dat");
     while(getline(File, istring))
     {
 		strcpy( pac[i].name, istring.c_str() );
 		pac[i].level=1;
+		pac[i].priority=0;
 		i++;
 	}        
     File.close();
     i=0;
-    ifstream file("/home/ofit/.code/packages/01_02_2017/var/Required.dat");
+    ifstream file("/home/lubuntu/code/04_13_2017/var/Required.dat");
     while(getline(file, istring))
     {
 		strcpy( pac[i].dep, istring.c_str() );
 		i++;
 	}        
     file.close();
+    
 //-------------------------------------------------------------------------
 // Count levels
 
@@ -73,6 +78,8 @@ int f=0;
 					if (itchar==""){break;}
 					if (itchar==pac[z].name) 
 					{
+						//pac[z].priority=pac[z].priority+1;
+						pac[i].priority=pac[i].priority+1;
 						if (pac[i].level>=pac[z].level) 
 						{
 							pac[z].level=pac[i].level+1;
@@ -94,24 +101,64 @@ int f=0;
 
 //-------------------------------------------------------------------------	
 // Sort Packages
-	
+
+// By level
+
 for ( int i = 0; i < PacCount; i++ )
+for ( int j = i; j < PacCount; j++ )
 {
-//	int min=i;
-	for ( int j = i; j < PacCount; j++ )
-	{
 		if (pac[i].level>pac[j].level)
 		{
-//			min=j;
 			pac2=pac[i];
 			pac[i]=pac[j];
 			pac[j]=pac2;
 		}
-	}
-//	pac2=pac[i];
-//	pac[i]=pac[min];
-//	pac[min]=pac2;
 }
+
+
+// By priority
+/*
+for ( int i = 0; i*300 < pac[PacCount-1].ypos; i++ )
+for ( int j = 0; j < 40; j++ )
+for ( int z = j; z < 40; z++ )
+{
+	if( pac[j+i*40].priority > pac[z+i*40].priority )	
+	{
+		pac2=pac[j+i*40];
+		pac[j+i*40]=pac[z+i*40];
+		pac[z+i*40]=pac2;
+	}
+
+}
+*/
+for ( int i = 0; i < PacCount-40; i=i+40 )
+for ( int j = 0; j < 39; j++ )
+{
+	for ( int z = j; z < 39; z++ )
+	{
+		if (pac[i+j].priority<pac[i+z].priority)
+		{
+			pac2=pac[i+j];
+			pac[i+j]=pac[i+z];
+			pac[i+z]=pac2;
+		}
+	}
+}
+/*
+int xi=0;
+
+for ( int i = 0; i < PacCount; i++ )
+{
+	if(xi>=40)
+	{
+		xi=0;
+		yi=yi+1;
+	}
+	pac[i].xpos=xi*200;
+	pac[i].ypos=yi*300;
+	xi++;
+}
+*/
 //-------------------------------------------------------------------------	
 // Create bitmap v
 
@@ -127,7 +174,7 @@ int bmy=(ml+pac[0].level)*300;
 
 for ( int i = 0; i < PacCount; i++ )
 {
-	if((xi>=40)||(pac[i].level>pac[i-1].level))
+	if(xi>=40)
 	{
 		xi=0;
 		yi=yi+1;
@@ -137,7 +184,23 @@ for ( int i = 0; i < PacCount; i++ )
 	xi++;
 }
 
-// zeroing bitmap
+
+for ( int i = 0; i < PacCount; i=i+2 )
+{
+	if(xi>=20)
+	{
+		xi=0;
+		yi=yi+1;
+	}
+	pac[i].xpos=4800-xi*200;
+	pac[i].ypos=4800+yi*300;
+	pac[i+1].xpos=5000+xi*200;
+	pac[i+1].ypos=4800+yi*300;
+	xi++;
+}
+
+//-------------------------------------------------------------------------	
+// zeroing bitmap v
 
 for ( int i = 0; i < 10000; i++ )
 for ( int j = 0; j < 10000; j++ )
@@ -186,30 +249,48 @@ for ( int i = 0; i < PacCount; i++ )
 					{						
 						//write line from pac[i].xpos+170 pac[i].ypos+40 to pac[z].xpos+30 pac[z].ypos+60
 						// Bresenham's line algorithm
-						int x1=pac[i].xpos+30;
-						int y1=pac[i].ypos+40	;
+						int x1=pac[i].xpos+170;
+						int y1=pac[i].ypos+60;
 						int x2=pac[z].xpos+30;
 						int y2=pac[z].ypos+40;
 						int dx=abs(x2-x1);
 						int dy=abs(y2-y1);
-//						cout << x1 << " " << x2<< endl;
-						int f=1;
+						int fx=1;
 						if (x1>x2)
-						f=-	1;
+						fx=-1;
+						int fy=1;
+						if (y1>y2)
+						fy=-1;
 						int e=0;
-						int de=dy;
-						int y=y1;
-						int x=x1;
-						while (x!=x2)
-						{	
-							bitmap[x][y]=0;
-							e=e+de;
-							if(2*e>=dx)
-							{
-								y=y+1;
-								e=e-dx;
+						if(abs(x2-x1)>abs(y2-y1))
+						{
+							int de=dy;
+							int y=y1;
+							for (int x = x1; x < x2; x=x+fx)
+							{	
+								bitmap[x][y]=0;
+								e=e+de;
+								if(2*e>=dx)
+								{
+									y=y+fy;
+									e=e-dx;
+								}
 							}
-							x=x+f;
+						}
+						else
+						{
+							int de=dx;
+							int x=x1;
+							for (int y = y1; y < y2; y=y+fy)
+							{	
+								bitmap[x][y]=0;
+								e=e+de;
+								if(2*e>=dy)
+								{
+									x=x+fx;
+									e=e-dy;
+								}
+							}
 						}
 						
 								
@@ -230,11 +311,57 @@ for ( int i = 0; i < PacCount; i++ )
 			}
 		}
 }
-						
+	
+/*	
+						int x1=100;
+						int y1=100;
+						int x2=200;
+						int y2=400;
+						int dx=abs(x2-x1);
+						int dy=abs(y2-y1);
+						int fx=1;
+						if (x1>x2)
+						fx=-1;
+						int fy=1;
+						if (y1>y2)
+						fy=-1;
+						int e=0;
+						if((x2-x1)>(y2-y1))
+						{
+							int de=dy;
+							int y=y1;
+							for (int x = x1; x < x2; x=x+fx)
+							{	
+								bitmap[x][y]=0;
+								e=e+de;
+								if(2*e>=dx)
+								{
+									y=y+fy;
+									e=e-dx;
+								}
+							}
+						}
+						else
+						{
+							int de=dx;
+							int x=x1;
+							for (int y = y1; y < y2; y=y+fy)
+							{	
+								bitmap[x][y]=0;
+								e=e+de;
+								if(2*e>=dy)
+								{
+									x=x+fx;
+									e=e-dy;
+								}
+							}
+						}
+	*/	
+
 //-------------------------------------------------------------------------	
 // Write bitmap
 
-ofstream ofs("/home/ofit/.code/packages/01_02_2017/var/Bitmaple.dat");
+ofstream ofs("/home/lubuntu/code/04_13_2017/var/Bitmaple.dat");
 for ( int j = 0; j < 10000; j++ )
 {
 	for ( int i = 0; i < 10000; i++ )
@@ -258,7 +385,7 @@ cout << bitmap[1][100] << ' ' << bmx << ' ' << bmy << ' '<< endl;
 
 for ( int i = 0; i < PacCount; i++ )
 {
-//	cout << pac[i].name << ',' << pac[i].level << ':' << pac[i].xpos << ',' << pac[i].ypos <<',' << i << "\n";
+	cout << pac[i].name << ',' << pac[i].level << ',' << pac[i].priority << ':' << pac[i].xpos << ',' << pac[i].ypos <<',' << i << "\n";
 
 //cout << i << ':' << pac[i].name << ' '; 
 //if (pac[i].level>pac	[i+1].level)		
@@ -266,5 +393,10 @@ for ( int i = 0; i < PacCount; i++ )
 }	
 cout << "cgroup разобраться как ограничить колличество выделяемой памяти процессу"<<endl;
 cout << "запуск приложения из субгруппы"<<endl; 
+cout << "приоритет v";
+cout << "сортировка по приоритету(колличество зависимостей) v";
+cout << "убрать отрисовку по уровням только по порядку v";
+cout << "отрисовка из центра по 2 пакета влево вправо v";
+cout << "съехала матрица вверх, нужно понять почему v";
 	return 0;
 }	
