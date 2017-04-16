@@ -4,105 +4,132 @@
 #include <string>
 #include <cmath>
 #include <vector>
-
+ 
+ 
 const int DepWidth=1101;
 const int PacCount=752;
 const int MaxWidth=29;
 int bitmap[10001][10001];
-
+ 
 using namespace std;
-
-struct Packages
+ 
+struct Package
 {
-	char name[MaxWidth];
-	int level;
-	char dep[DepWidth];
-	int xpos;
-	int ypos;
-	int priority;
+    char name[MaxWidth];
+    char dep[DepWidth];
+    int depAmount;
+    int depNumber[DepWidth];
+    int level;
+    int priority;
+    int xpos;
+    int ypos;
 };
-
+ 
+ 
+void CountLevels(Package p[PacCount], int num)
+{
+	bool flag=true;
+    for ( int i = 1; i < p[num].depAmount; i++ )
+    {
+		for ( int j = 1; j < p[p[num].depNumber[i]].depAmount; j++ )
+		{
+			if(p[p[num].depNumber[i]].depNumber[j]==num)
+			{flag=false;}
+		}
+		if(flag==false)
+		{
+			if(p[p[num].depNumber[i]].level>p[num].level)
+			{p[p[num].depNumber[i]].level=p[num].level;}
+			else
+			{p[num].level=p[p[num].depNumber[i]].level;}
+		}
+		if ((p[p[num].depNumber[i]].level<=p[num].level)&&(flag==true))
+		{
+			p[p[num].depNumber[i]].level=p[num].level+1;
+			CountLevels(p,p[num].depNumber[i]);
+		}
+    }
+}
+ 
 int main()
 {
-	struct Packages pac[PacCount],pac2;
-	int i=0;
-//	char ichar[MaxWidth];
-	string istring,itchar;
-	
-//-------------------------------------------------------------------------	
+    struct Package pac[PacCount],pac2;
+    string istring,itchar;
+    int i;
+   
+   
+//-------------------------------------------------------------------------
 // Read files
-
-    ifstream File("/home/lubuntu/code/04_13_2017/var/Packages.dat");
+ 
+ 
+    ifstream File("/home/lubuntu/code/var/Packages.dat");
+    i=0;
     while(getline(File, istring))
     {
-		strcpy( pac[i].name, istring.c_str() );
-		pac[i].level=1;
-		pac[i].priority=0;
-		i++;
-	}        
+        strcpy( pac[i].name, istring.c_str() );
+        pac[i].level=1;
+        pac[i].priority=0;
+        pac[i].depAmount=0;
+        i++;
+    }        
     File.close();
+ 
+ 
+    ifstream file("/home/lubuntu/code/var/Required.dat");
     i=0;
-    ifstream file("/home/lubuntu/code/04_13_2017/var/Required.dat");
     while(getline(file, istring))
     {
-		strcpy( pac[i].dep, istring.c_str() );
-		i++;
-	}        
+        strcpy( pac[i].dep, istring.c_str() );
+        i++;
+    }        
     file.close();
-    
+ 
+ 
+//-------------------------------------------------------------------------
+// Search deps
+ 
+ 
+    for ( int i = 0; i < PacCount; i++ )
+    {
+        string itchar="";  
+        int ij=strlen(pac[i].dep);
+        for ( int j = 0; j < ij+1; j++ )
+        {                  
+            if ((pac[i].dep[j]==' ') || (j==ij))
+            {              
+                for ( int z = 0; z < PacCount; z++ )
+                {
+                    if (itchar==""){break;}
+                    if (itchar==pac[z].name)
+                    {
+                        pac[i].depAmount=pac[i].depAmount+1;
+                        pac[i].depNumber[pac[i].depAmount]=z;
+                        break;                                         
+                    }
+                }
+                itchar=""; 
+            }
+            else
+            {
+                itchar=itchar+pac[i].dep[j];
+            }
+        }
+    }
+ 
+ 
 //-------------------------------------------------------------------------
 // Count levels
-
-
-//int wl=1; //wrong levels
-int f=0;
-//	cout << f << " ";
-//while (wl==1)
-//{
-	f++;
-//	wl=0;
-	for ( int i = 0; i < PacCount; i++ )
-	{
-//		if (i==0)	cout << f << "\n";
-		string itchar="";	
-		int ij=strlen(pac[i].dep);
-
-		for ( int j = 0; j < ij+1; j++ )
-		{			
-			if(pac[i].dep[j]=='N')
-			{break;}			
-			if ((pac[i].dep[j]==' ') || (j==ij))
-			{				
-				for ( int z = 0; z < PacCount; z++ )
-				{
-					if (itchar==""){break;}
-					if (itchar==pac[z].name) 
-					{
-						//pac[z].priority=pac[z].priority+1;
-						pac[i].priority=pac[i].priority+1;
-						if (pac[i].level>=pac[z].level) 
-						{
-							pac[z].level=pac[i].level+1;
-//							wl=1;
-//							cout << f << "\n";
-						}
-						break;						
-					}
-				}
-				itchar="";	
-			}
-			else
-			{
-				itchar=itchar+pac[i].dep[j];
-			}
-		}
-	}
-//}
-
+ 
+ 
+    for ( int i = 0; i < PacCount; i++ )
+    {
+		CountLevels(pac, i);
+    }
+ 
+ 
 //-------------------------------------------------------------------------	
-// Sort Packages
+// Sort Packages by level
 
-// By level
 
 for ( int i = 0; i < PacCount; i++ )
 for ( int j = i; j < PacCount; j++ )
@@ -116,27 +143,16 @@ for ( int j = i; j < PacCount; j++ )
 }
 
 
-// By priority
-/*
-for ( int i = 0; i*300 < pac[PacCount-1].ypos; i++ )
-for ( int j = 0; j < 40; j++ )
-for ( int z = j; z < 40; z++ )
-{
-	if( pac[j+i*40].priority > pac[z+i*40].priority )	
-	{
-		pac2=pac[j+i*40];
-		pac[j+i*40]=pac[z+i*40];
-		pac[z+i*40]=pac2;
-	}
+//-------------------------------------------------------------------------	
+// Sort Packages by priority
 
-}
-*/
+
 for ( int i = 0; i < PacCount-40; i=i+40 )
 for ( int j = 0; j < 39; j++ )
 {
 	for ( int z = j; z < 39; z++ )
 	{
-		if (pac[i+j].priority<pac[i+z].priority)
+		if (pac[i+j].depAmount<pac[i+z].depAmount)
 		{
 			pac2=pac[i+j];
 			pac[i+j]=pac[i+z];
@@ -144,29 +160,17 @@ for ( int j = 0; j < 39; j++ )
 		}
 	}
 }
-/*
-int xi=0;
 
-for ( int i = 0; i < PacCount; i++ )
-{
-	if(xi>=40)
-	{
-		xi=0;
-		yi=yi+1;
-	}
-	pac[i].xpos=xi*200;
-	pac[i].ypos=yi*300;
-	xi++;
-}
-*/
+
 //-------------------------------------------------------------------------	
 // Create bitmap v
 
+
 int xi=0;
 int yi=0;
-int ml=sqrt(PacCount)+1;
-int bmx=ml*2*100;
-int bmy=(ml+pac[0].level)*300;
+//int ml=sqrt(PacCount)+1;
+//int bmx=ml*2*100;
+//int bmy=(ml+pac[0].level)*300;
 //int xbitmap[][9000];
 //xbitmap[bmx][bmy]=10;
 
@@ -199,8 +203,10 @@ for ( int i = 0; i < PacCount; i=i+2 )
 	xi++;
 }
 
+
 //-------------------------------------------------------------------------	
 // zeroing bitmap v
+
 
 for ( int i = 0; i < 10000; i++ )
 for ( int j = 0; j < 10000; j++ )
@@ -208,8 +214,10 @@ for ( int j = 0; j < 10000; j++ )
 	bitmap[i][j]=1;
 }
 
+
 //-------------------------------------------------------------------------	
 // Write bitmap squad v
+
 
 for ( int i = 0; i < PacCount; i++ )
 {
@@ -229,8 +237,10 @@ for ( int i = 0; i < PacCount; i++ )
 	}
 }
 
+
 //-------------------------------------------------------------------------	
 // Write bitmap depends
+
 
 for ( int i = 0; i < PacCount; i++ )
 {
@@ -361,7 +371,8 @@ for ( int i = 0; i < PacCount; i++ )
 //-------------------------------------------------------------------------	
 // Write bitmap
 
-ofstream ofs("/home/lubuntu/code/04_13_2017/var/Bitmaple.dat");
+
+ofstream ofs("/home/lubuntu/code/var/Bitmaple.dat");
 for ( int j = 0; j < 10000; j++ )
 {
 	for ( int i = 0; i < 10000; i++ )
@@ -373,30 +384,44 @@ for ( int j = 0; j < 10000; j++ )
 ofs.close();
  
 
-
-
-						
-
-
-
-bitmap[1][100]=1;
-cout << bitmap[1][100] << ' ' << bmx << ' ' << bmy << ' '<< endl;
+//bitmap[1][100]=1;
+//cout << bitmap[1][100] << ' ' << bmx << ' ' << bmy << ' '<< endl;
 
 
 for ( int i = 0; i < PacCount; i++ )
 {
-	cout << pac[i].name << ',' << pac[i].level << ',' << pac[i].priority << ':' << pac[i].xpos << ',' << pac[i].ypos <<',' << i << "\n";
-
-//cout << i << ':' << pac[i].name << ' '; 
-//if (pac[i].level>pac	[i+1].level)		
-//cout << "\n" << "\n";
+//	cout << pac[i].name << ',' << pac[i].level << ',' << pac[i].priority << ':' << pac[i].xpos << ',' << pac[i].ypos <<',' << i << "\n";
 }	
+
+
+//-------------------------------------------------------------------------
+// Test result
+ 
+ 
+for ( int i = 0; i < PacCount; i++ )
+{
+    cout << pac[i].name << ',' << pac[i].level << ':';
+    for ( int j = 1; j < pac[i].depAmount+1; j++ )
+    {
+//        cout << pac[i].depNumber[j] << ' ';
+    }
+    cout << "\n";
+}
+ 
+ 
+//-------------------------------------------------------------------------
+// Tasks
+ 
+ 
 cout << "cgroup разобраться как ограничить колличество выделяемой памяти процессу"<<endl;
 cout << "запуск приложения из субгруппы"<<endl; 
-cout << "приоритет v";
-cout << "сортировка по приоритету(колличество зависимостей) v";
-cout << "убрать отрисовку по уровням только по порядку v";
-cout << "отрисовка из центра по 2 пакета влево вправо v";
-cout << "съехала матрица вверх, нужно понять почему v";
-	return 0;
-}	
+cout << "приоритет v"<<endl;
+cout << "сортировка по приоритету(колличество зависимостей) v"<<endl;
+cout << "убрать отрисовку по уровням только по порядку v"<<endl;
+cout << "отрисовка из центра по 2 пакета влево вправо v"<<endl;
+cout << "съехала матрица вверх, нужно понять почему v"<<endl;
+cout << "переписать отрисовку зависимостей"<<endl;
+
+
+return 0;
+}
