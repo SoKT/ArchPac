@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 #$HOME/code/04_18_2017/src/25_PaketCut.sh
 
 
