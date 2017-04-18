@@ -1,8 +1,12 @@
 #!/bin/bash
+#$HOME/code/04_18_2017/src/plot.sh
+
+
 echo "Start creating:"
 date
 ulimit -m 5000
 gnuplot << EOP
+
 
 set size square
 set palette rgb 34,35,36
@@ -11,7 +15,8 @@ set palette rgb 34,35,36
 set xrange [10:9000]
 set yrange [10:9000]
 set terminal png size 10100,10100
-set output "$PWD/../png/img $(date).png"
+set output "$PWD/2png/png/img $(date).png"
+
 
 ################################
 # example matrix
@@ -26,7 +31,7 @@ set output "$PWD/../png/img $(date).png"
 # 0 0 2 3 3 3 3 2 0 0
 # 0 0 0 1 2 2 1 0 0 0
 
-plot '$PWD/../var/Bitmaple.dat' matrix with image
+plot '$PWD/2var/var/Bitmaple.dat' matrix with image
 
 EOP
 
