@@ -1,7 +1,10 @@
 # ArchPac
-##### 1 ./26_bash.sh
-##### 2 compile and run pac.cpp
-##### 3 ./plot.sh
+##### To launch download PacArch,
+##### run command:
+##### $ sh PacArch
 
-##### Input folder: var
+#### Discription
+##### Input  folder: var
 ##### Output folder: png
+##### Error  folder: log
+##### Source folder: src
