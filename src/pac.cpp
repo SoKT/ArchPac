@@ -58,9 +58,7 @@ void DrawLine( int x1, int y1, int x2, int y2)
     const int deltaY = abs(y2 - y1);
     const int signX = x1 < x2 ? 1 : -1;
     const int signY = y1 < y2 ? 1 : -1;
-    //
     int error = deltaX - deltaY;
-    //
     bitmap[x2][y2]=0;
     while(x1 != x2 || y1 != y2)
    {
@@ -196,18 +194,15 @@ for ( int j = 1; j < 40; j++ )
     }
 }
 
- 
+   
+//-------------------------------------------------------------------------
+SearchDep(pac);
 //-------------------------------------------------------------------------
 // Create bitmap v
  
  
 int xi=0;
 int yi=0;
-//int ml=sqrt(PacCount)+1;
-//int bmx=ml*2*100;
-//int bmy=(ml+pac[0].level)*300;
-//int xbitmap[][9000];
-//xbitmap[bmx][bmy]=10;
  
  
 for ( int i = 1; i < PacCount+1; i++ )
@@ -305,25 +300,6 @@ for ( int i = 1; i < PacCount+1; i++ )
     cout << "\n";
 }
  
- 
- /*
-for ( int i = 1; i < PacCount+1; i++ )
-{
-    cout << pac[i].name << ',' << pac[i].level << ':';
-    for ( int j = 1; j < pac[i].depAmount+1; j++ )
-    {
-        cout << pac[i].depNumber[j] << ' ';
-    }
-    cout << "\n";
-}
- 
- 
-//  DrawLine( x1, y1, x2, y2);
-    DrawLine(200,400,100,100);
-    DrawLine(100,500,100,100);     
-    DrawLine(500,200,100,200);
-    */
-	
 	
 //-------------------------------------------------------------------------
 // Write bitmap
