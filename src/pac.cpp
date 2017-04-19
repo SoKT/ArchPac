@@ -10,7 +10,7 @@ const int Bit=100;
 const int DepWidth=1101;
 const int PacCount=752;
 const int MaxWidth=30;
-int bitmap[10001][10001];
+int bitmap[12000][12000];
  
 using namespace std;
  
