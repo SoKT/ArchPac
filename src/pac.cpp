@@ -127,7 +127,7 @@ int main()
 // Read files
  
  
-    ifstream File("/home/lubuntu/code/var/Packages.dat");
+    ifstream File("Packages.dat");
     i=1;
     while(getline(File, istring))
     {
@@ -138,7 +138,7 @@ int main()
     File.close();
  
  
-    ifstream file("/home/lubuntu/code/var/Required.dat");
+    ifstream file("Required.dat");
     i=1;
     while(getline(file, istring))
     {
@@ -329,7 +329,7 @@ for ( int i = 1; i < PacCount+1; i++ )
 // Write bitmap
  
  
-ofstream ofs("/home/lubuntu/code/var/Bitmaple.dat");
+ofstream ofs("Bitmaple.dat");
 for ( int j = 0; j < 10000; j++ )
 {
     for ( int i = 0; i < 10000; i++ )
