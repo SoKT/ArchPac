@@ -15,7 +15,7 @@ set palette rgb 34,35,36
 set xrange [10:9000]
 set yrange [10:9000]
 set terminal png size 10100,10100
-set output "$PWD/2png/img $(date).png"
+set output "$PWD/png/img $(date).png"
 
 
 ################################
@@ -31,7 +31,7 @@ set output "$PWD/2png/img $(date).png"
 # 0 0 2 3 3 3 3 2 0 0
 # 0 0 0 1 2 2 1 0 0 0
 
-plot '$PWD/2var/Bitmaple.dat' matrix with image
+plot '$PWD/var/Bitmaple.dat' matrix with image
 
 EOP
 
