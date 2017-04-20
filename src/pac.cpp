@@ -305,7 +305,7 @@ for ( int i = 1; i < PacCount+1; i++ )
 // Write bitmap
  
  
-ofstream ofs("Bitmaple.dat");
+ofstream ofs("BitMaple.dat");
 for ( int j = 0; j < 10000; j++ )
 {
     for ( int i = 0; i < 10000; i++ )
