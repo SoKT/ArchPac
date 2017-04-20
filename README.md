@@ -1,7 +1,6 @@
 # ArchPac
-##### To launch download PacArch,
-##### run command:
-##### $ sh PacArch
+##### To launch download PacArch.zip
+##### Unzip it
 
 #### Discription
 ##### Input  folder: var
