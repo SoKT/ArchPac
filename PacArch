@@ -4,17 +4,18 @@ mkdir $PWD/ArchPac/png
 mkdir $PWD/ArchPac/log
 ln -s $PWD/ArchPac/var $PWD/ArchPac/src/var
 ln -s $PWD/ArchPac/png $PWD/ArchPac/src/png
+ln -s $PWD/ArchPac/log $PWD/ArchPac/src/log
 curl -o $PWD/ArchPac/src/32_bash.sh https://raw.githubusercontent.com/SoKT/ArchPac/master/src/32_bash.sh
 curl -o $PWD/ArchPac/src/pac.cpp https://raw.githubusercontent.com/SoKT/ArchPac/master/src/pac.cpp
 curl -o $PWD/ArchPac/src/plot.sh https://raw.githubusercontent.com/SoKT/ArchPac/master/src/plot.sh
 curl -o $PWD/ArchPac/var/BitMaple.dat https://raw.githubusercontent.com/SoKT/ArchPac/master/var/BitMaple.dat
 curl -o $PWD/ArchPac/var/Packages.dat https://raw.githubusercontent.com/SoKT/ArchPac/master/var/Packages.dat
 curl -o $PWD/ArchPac/var/Required.dat https://raw.githubusercontent.com/SoKT/ArchPac/master/var/Required.dat
-g++ -o $PWD/ArchPac/src/pac $PWD/ArchPac/src/pac.cpp 
-. $PWD/ArchPac/src/32_bash.sh
-touch $PWD/ArchPac/var/BitMaple.dat
 ln -s $PWD/ArchPac/var/BitMaple.dat $PWD/ArchPac/src/BitMaple.dat
 ln -s $PWD/ArchPac/var/Packages.dat $PWD/ArchPac/src/Packages.dat
 ln -s $PWD/ArchPac/var/Required.dat $PWD/ArchPac/src/Required.dat
-$PWD/ArchPac/src/pac 1>$PWD/ArchPac/log/PacOutput.log 2>$PWD/ArchPac/log/PacError.log
-. $PWD/ArchPac/src/plot.sh 1>$PWD/ArchPac/log/PlotOutput.log  2>$PWD/ArchPac/log/PlotError.log
+cd $PWD/ArchPac/src
+g++ -o pac pac.cpp 
+. 32_bash.sh
+./pac 1>$PWD/log/PacOutput.log 2>$PWD/log/PacError.log
+. plot.sh 1>$PWD/log/PlotOutput.log  2>$PWD/log/PlotError.log
