@@ -11,9 +11,6 @@ curl -o $PWD/ArchPac/src/plot.sh https://raw.githubusercontent.com/SoKT/ArchPac/
 curl -o $PWD/ArchPac/var/BitMaple.dat https://raw.githubusercontent.com/SoKT/ArchPac/master/var/BitMaple.dat
 curl -o $PWD/ArchPac/var/Packages.dat https://raw.githubusercontent.com/SoKT/ArchPac/master/var/Packages.dat
 curl -o $PWD/ArchPac/var/Required.dat https://raw.githubusercontent.com/SoKT/ArchPac/master/var/Required.dat
-ln -s $PWD/ArchPac/var/BitMaple.dat $PWD/ArchPac/src/BitMaple.dat
-ln -s $PWD/ArchPac/var/Packages.dat $PWD/ArchPac/src/Packages.dat
-ln -s $PWD/ArchPac/var/Required.dat $PWD/ArchPac/src/Required.dat
 cd $PWD/ArchPac/src
 g++ -o pac pac.cpp 
 . 32_bash.sh
