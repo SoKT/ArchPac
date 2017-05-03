@@ -4,7 +4,8 @@
 #include <string>
 #include <cmath>
 #include <vector>
- 
+#include <unistd.h> //> getcwd
+
  
 const int Bit=100;
 const int DepWidth=1101;
@@ -119,13 +120,22 @@ int main()
     struct Package pac[PacCount+1],pac2;
     string istring,itchar;
     int i;
-   
-   
+    char buff[1024];
+	
+	
+//-------------------------------------------------------------------------
+// Current directory
+	
+	
+    getcwd( buff, 1024 );
+    string CWD(buff);
+	
+	
 //-------------------------------------------------------------------------
 // Read files
  
  
-    ifstream File("Packages.dat");
+    ifstream File(CWD + "/var/Packages.dat");
     i=1;
     while(getline(File, istring))
     {
@@ -136,7 +146,7 @@ int main()
     File.close();
  
  
-    ifstream file("Required.dat");
+    ifstream file(CWD + "/var/Required.dat");
     i=1;
     while(getline(file, istring))
     {
@@ -305,7 +315,7 @@ for ( int i = 1; i < PacCount+1; i++ )
 // Write bitmap
  
  
-ofstream ofs("BitMaple.dat");
+ofstream ofs(CWD + "/var/BitMaple.dat");
 for ( int j = 0; j < 10000; j++ )
 {
     for ( int i = 0; i < 10000; i++ )
